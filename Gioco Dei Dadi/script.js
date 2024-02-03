@@ -1,5 +1,5 @@
 // creazione numero casuale
 
-let casual = Math.random();
+let casual = Math.floor(Math.random() * 6) + 1;
 
 console.log(casual);
