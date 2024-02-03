@@ -41,8 +41,10 @@ document.getElementById("check-email").onclick = function() {
     const accessElement = document.getElementById("access");
 
     if(mailFound) {
-        accessElement.innerHTML = "Welcome back, you're not a bot";
+        accessElement.innerHTML = "Welcome back, " + userEmail;
+        accessElement.style.color = "#00BCD4";
     } else {
         accessElement.innerHTML = "Pay attention, next time we call the police";
+        accessElement.style.color = "#FF4081";
     }
 }
