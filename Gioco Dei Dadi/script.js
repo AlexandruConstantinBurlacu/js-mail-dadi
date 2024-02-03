@@ -16,3 +16,13 @@ document.getElementById("roll-dice").onclick = function() {
     document.getElementById("player-dice").innerHTML = casualPlayer;
     document.getElementById("computer-dice").innerHTML = casualComputer;
 }
+
+// aggiungo le condizioni vittoria, sconfitta, pareggio
+
+if (casualPlayer > casualComputer) {
+    document.getElementById("stats").innerHTML = "You are lucky today";
+} else if (casualPlayer < casualComputer) {
+    document.getElementById("stats").innerHTML = "Not the best day today, huh?";
+} else {
+    document.getElementById("stats").innerHTML = "Nice but not good";
+}
