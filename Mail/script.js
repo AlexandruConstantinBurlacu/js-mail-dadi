@@ -24,3 +24,25 @@ const mailArray = [
 ]
 
 console.log(mailArray);
+
+// collegamento pulsante alla mail
+
+document.getElementById("check-email").onclick = function() {
+    const userEmail = document.getElementById("your-email").value;
+
+    let mailFound = false;
+
+    for(let i = 0; i < mailArray.length; i++) {
+        if(mailArray[i] == userEmail) {
+            mailFound = true;
+        }
+    }
+
+    const accessElement = document.getElementById("access");
+
+    if(mailFound) {
+        accessElement.innerHTML = "Welcome back, you're not a bot";
+    } else {
+        accessElement.innerHTML = "Pay attention, next time we call the police";
+    }
+}
