@@ -22,10 +22,13 @@ document.getElementById("roll-dice").onclick = function() {
 
     if (casualPlayer > casualComputer) {
         document.getElementById("stats").innerHTML = "You are lucky today";
+        document.getElementById("stats").style.color = "#FFD700";
     } else if (casualPlayer < casualComputer) {
-        document.getElementById("stats").innerHTML = "Not the best day today, huh?";
+        document.getElementById("stats").innerHTML = "Not your best day";
+        document.getElementById("stats").style.color = "#C0C0C0";
     } else {
         document.getElementById("stats").innerHTML = "Nice but not good";
+        document.getElementById("stats").style.color = "#8B4513";
     }
 }
 
